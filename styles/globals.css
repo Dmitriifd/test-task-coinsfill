@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {}
+
+.header {
+  background-image: url('../assets/img/top-bg.png'),
+    linear-gradient(180deg, #4936d4 0%, #6835d4 100%);
+  background-repeat: no-repeat;
+
+  background-position: right bottom;
+}
+
+.footer-nav {
+  border-radius: 10px 10px 0px 0px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #e5f1fb 100%);
+  box-shadow: 0px -5px 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+a.active {
+  color: #4835d4;
+  fill: #4835d4;
+}
+
+a.active svg path {
+  fill: #4835d4;
+  fill-opacity: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
