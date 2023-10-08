@@ -13,13 +13,10 @@ const Profile = () => {
     const token = localStorage.getItem('token');
     if (!token) {
       router.push('/login');
+      return;
     }
-  }, []);
 
-  useEffect(() => {
     const getAvatar = async () => {
-      const token = localStorage.getItem('token');
-      if (!token || avatar) return;
       try {
         const response = await baseApi.get('/account/image', {
           headers: {
@@ -35,7 +32,7 @@ const Profile = () => {
     };
 
     getAvatar();
-  }, [avatar]);
+  }, []);
 
   return (
     <>

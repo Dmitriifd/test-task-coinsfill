@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
     if (!isTokenValid) {
       logout(); // Выполняем выход пользователя
     }
-  });
+  }, [checkTokenValidity]);
 
   const login = async (data) => {
     try {
